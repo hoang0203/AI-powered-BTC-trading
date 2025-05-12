@@ -41,3 +41,7 @@ airflow/dags/plugins/test.ipynb
 requirements_brief.docx
 noted.txt
 rss-urls-1.pdf
+airflow/airflow.db
+airflow/simple_auth_manager_passwords.json.generated
+airflow/airflow.db-shm
+airflow/airflow.db-wal
