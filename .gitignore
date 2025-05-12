@@ -37,6 +37,7 @@ __pycache__/
 # Ignore additional files and folders
 airflow/dags/buffer_memory/
 airflow/dags/images/
+airflow/dags/recommendations/
 airflow/dags/plugins/test.ipynb
 requirements_brief.docx
 noted.txt
