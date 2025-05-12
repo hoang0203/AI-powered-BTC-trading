@@ -38,6 +38,7 @@ Follow these steps to use the system manually:
 6. Open the webserver in your browser and manually trigger the workflow.
 7. Open the path: ./airflow/dags/recommendations and get the newest file
 8. Use some tool to convert the parquet style into csv
+
 ## Developer Instructions  
 For developers, you can use the following commands in the terminal:  
 1. Build the Docker image:  
@@ -51,3 +52,6 @@ For developers, you can use the following commands in the terminal:
 3. Access the Airflow webserver at `http://localhost:8080` and trigger the DAG manually.  
 
 4. Use file: ./airflow/dags/plugins/check_recommendation.ipynb to see the latest result
+
+## Contact me
+If you have any question, kindly contect me via email: phanhuyhoang@gmail.com
