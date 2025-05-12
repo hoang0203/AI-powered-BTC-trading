@@ -1,7 +1,6 @@
-import math
+import json
 import os
 import random
-import json
 
 import pandas as pd
 
@@ -14,14 +13,14 @@ from airflow.providers.standard.operators.python import PythonOperator
 from airflow.sdk import DAG
 from dotenv import load_dotenv
 
-from plugins.crawl_news import CrawlRSSNews
 from plugins.crawl_news import crawl_api_news
+from plugins.crawl_news import CrawlRSSNews
 from plugins.gemini_model import AnalyzeAI
 from plugins.gemini_model import FilterArticle
 from plugins.gemini_model import InvestmentAI
 from plugins.gemini_model import SummarizeArticle
-from plugins.snapshot import snapshot_chart
 from plugins.snapshot import snapshot_article
+from plugins.snapshot import snapshot_chart
 
 
 # Load environment variables from .env file

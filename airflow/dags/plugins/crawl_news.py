@@ -3,7 +3,8 @@ import xml.etree.ElementTree as ET
 
 import requests
 
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import as_completed
+from concurrent.futures import ThreadPoolExecutor
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
