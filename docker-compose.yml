@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  trading:
+    image: trading:latest
+    volumes:
+      - ./airflow:/opt/airflow
+    ports:
+      - "8080:8080"  # Airflow web server
+    command: airflow standalone
+    depends_on:
+      - selenium0
+      - selenium1
+    env_file:
+      - .env 
+
+  selenium0:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "${PORT_SELENIUM0}:4444"
+    restart: always
+
+  selenium1:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "${PORT_SELENIUM1}:4444"
+    restart: always
+    
+  selenium2:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "${PORT_SELENIUM2}:4444"
+    restart: always
+    
+  selenium3:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "${PORT_SELENIUM3}:4444"
+    restart: always
+    
+    
