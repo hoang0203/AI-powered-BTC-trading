@@ -5,10 +5,10 @@ Discover the ultimate AI-powered BTC trading companion! This project combines th
 ## User Instructions  
 Follow these steps to use the system manually:  
 1. Install **Docker Desktop** on your machine.  
-2. Download the project folder from the repository.  
-3. Build the Docker image from the `Dockerfile`.  
+2. Install **Visual Studio Code** for editing and managing files.  
+3. Download the project folder from the repository.  
 4. Create a `.env` file with the required key-value pairs.  
-    Example of a `.env` file:  
+    All keys of a `.env` file:  
     ```  
     # Selenium service configurations  (make sure 4 ports are available)
     PORT_SELENIUM0=4444  
@@ -33,11 +33,13 @@ Follow these steps to use the system manually:
     RSS_URL="https://www.nbcnews.com/rss;;https://www.cbsnews.com/latest/rss/main"
     (input rss feed apis separated by 2 semicolons ";;")  
     ```  
-5. Build and start the `docker-compose.yml` file:  
+5. Build the Docker image from the `Dockerfile`.  
+6. Build and start the `docker-compose.yml` file:  
     - Right-click on the file and select **Compose Restart** from the context menu.  
-6. Open the webserver in your browser and manually trigger the workflow.
-7. Open the path: ./airflow/dags/recommendations and get the newest file
-8. Use some tool to convert the parquet style into csv
+7. Open the webserver in your browser and manually trigger the workflow.  
+8. Retrieve the user and password from the file `./airflow/simple_auth_manager_passwords.json.generated` (automatically created when running Docker).  
+9. Open the path: `./airflow/dags/recommendations` and get the newest file.  
+10. Use a tool to convert the Parquet file into CSV format.  
 
 ## Developer Instructions  
 For developers, you can use the following commands in the terminal:  
